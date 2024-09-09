@@ -1,0 +1,104 @@
+body {
+    background-color: #e6e3db;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 2.4rem;
+}
+
+*::first-letter {
+    text-transform: capitalize;
+}
+
+form {
+    margin: 2rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 3rem auto;
+    column-gap: 15px;
+}
+
+label {
+    color: #ae2503;
+    margin: 1rem;
+}
+
+input {
+    border: none;
+    padding-left: 1rem;
+    background-color: #f1eaea;
+    color: #A7D49B;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 2rem;
+}
+
+.buttonAdd {
+    border-radius: 5%;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #dedcd7;
+    color: #ae2503;
+    height: 6rem;
+    margin: 2rem;
+}
+
+.list {
+    margin: 5rem auto;
+    width: 30vw;
+    color: #ae2503;
+}
+
+.task {
+    background-color: #ae2503;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.taskDone {
+    background-color: #A7D49B;
+    text-decoration: line-through;
+    color: #f1eaea;
+}
+
+
+
+/* .date, .date-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#date-number {
+    font-size: 50px;
+}
+
+#date-day {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#date-number, 
+#date-month, 
+#date-day {
+    font-weight: bold;
+}
+
+#date-month,
+#date-year {
+    margin-left: 15px;
+}
+
+.order-button {
+    background-color: var(--orderbutton);
+    color: var(--fondo);
+} */
