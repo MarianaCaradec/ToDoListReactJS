@@ -14,7 +14,7 @@ const ToDoList = () => {
             const newTask = {
                 id: uuidv4(),
                 text: task,
-                isDone: false
+                isNotDone: true
             }
             setTasks([...tasks, newTask])
             setTask('')
@@ -29,7 +29,7 @@ const ToDoList = () => {
 
     const taskDone = (id) => {
         const currentTasks = tasks.map(task => task.id === id ? 
-            {...task, isDone: !task.isDone} 
+            {...task, isNotDone: !task.isNotDone} 
             : task)
         setTasks(currentTasks)
     }
@@ -51,7 +51,7 @@ const ToDoList = () => {
                 <ul className='list'>
                     {tasks.length > 0 ? tasks.map((task) => (
                             <li key={task.id}>
-                                <button className={task.isDone ? 'taskDone' : 'task'}  
+                                <button className={!task.isNotDone ? 'taskDone' : 'task'}  
                                 onClick={() => taskDone(task.id)}> {task.text} </button> 
                                 <button onClick={() => deleteTask(task.id)}>Eliminar tarea</button>
                             </li>
